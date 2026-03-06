@@ -1,1 +1,24 @@
-{"name":"f1-server","version":"1.0.0","description":"Server for F1 app","main":"index.js","author":"Sainath Kamble","scripts":{"start":"nodemon -r dotenv/config --experimental-json-modules src/index.js"},"devDependencies":{"nodemon":"^3.0.1","prettier":"^3.0.3"},"dependencies":{"axios":"^1.13.6","bcrypt":"^6.0.0","cookie-parser":"^1.4.7","cors":"^2.8.6","dotenv":"^17.3.1","express":"^5.2.1","jsonwebtoken":"^9.0.3","mongodb":"^7.1.0","mongoose":"^9.2.3","mongoose-aggregate-paginate-v2":"^1.1.4","nodemon":"^3.1.14","prettier":"^3.8.1"}}
+{ 
+    "name":"f1-server",
+    "version":"1.0.0",
+    "type": "module",
+    "description":"Server for F1 app",
+    "main":"index.js",
+    "author":"Sainath Kamble",
+    "scripts": {
+      "start": "nodemon --env-file=.env --experimental-json-modules src/index.js"
+    },
+    "devDependencies":{
+        "nodemon":"^3.0.1",
+        "prettier":"^3.0.3"},
+        "dependencies":{"axios":"^1.13.6",
+        "bcryptjs":"^3.0.3",
+        "cookie-parser":"^1.4.7","cors":"^2.8.6",
+        "dotenv":"^17.3.1","express":"^5.2.1",
+        "jsonwebtoken":"^9.0.3","mongodb":"^7.1.0",
+        "mongoose":"^9.2.4",
+        "mongoose-aggregate-paginate-v2":"^1.1.4",
+        "nodemon":"^3.1.14",
+        "prettier":"^3.8.1"
+    }
+}
