@@ -1,16 +1,16 @@
 import "dotenv/config"
 import dotenv from "dotenv"
 import connectDB from "./db/index.js";
-import {app} from './app.js'
+import { startHttpServer } from "./app.js";
+import { startLiveTimingForwarder } from "./controller/livetiming.controller.js";
 
 dotenv.config({
     path: './.env'
 })
 
 connectDB().then(() => {
-    app.listen(process.env.PORT || 8000, () => {
-        console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
-    })
+    startHttpServer();
+    startLiveTimingForwarder();
 })
 .catch((err) => {
     console.log("MONGO db connection failed !!! ", err);
